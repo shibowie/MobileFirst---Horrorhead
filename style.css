@@ -3,7 +3,7 @@ html {
     font-size: 14px;
 }
 body {
-    background-image: url(/images/old-dark-scary-corridor-04-with-ghost-01.png);
+    background-image: url(./images/old-dark-scary-corridor-04-with-ghost-01.png);
     background-position: center;
     display: flex;
     flex-direction: column;
