@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=New+Tegomin&family=Special+Elite&family=Unica+One&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
     <title>Horrorhead</title>
 </head>
+
 <body>
     <div class="big-container">
-        <header><h1>ARE YOU A<br>HORROR HEAD?</h1></header>
-        <h2>join us, and<br><i>──── ❝you'll float too❞ ────</i></h2>
+
+        <header>
+            <h1>ARE YOU A<br>HORROR HEAD?</h1>
+            <h2>join us, and<br><i>────❝ you'll float too ❞────</i></h2>
+        </header>
+
         <main>
-        <div class="input">
-            <input type="text" id="username" placeholder=" Username">
-            <input type="password" id="password" placeholder=" Password">
-        </div>
-        <span class="remember-forgot">
-            <div class="remember"><input type="checkbox" id="checkbox"> Remember me</div>
-            <p id="forgot">Forgot your password?</p>
-        </span>
-        <div class="buttons">
-            <button id="log-in">Log in</button>
-            <button id="new-victim">new victim</button>
-        </div>
-        <div class="social-buttons">
-            <button id="google">log in with Google</button>
-            <button id="facebook">log in with Facebook</button>
-        </div>
+            <section id="auth-section">
+            <div class="desktop-layout mobile-layout">
+            <form id="login-form">
+
+                <div class="input">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember">
+                        <input type="checkbox" id="checkbox">
+                        Remember me
+                    </label>
+                    <p id="forgot">Forgot your password?</p>
+                </div>
+                
+                <div class="buttons">
+                    <button type="submit" id="log-in">Log in</button>
+                    <button type="button" id="new-victim">new victim</button>
+                </div>
+                
+                <p id="message"></p>
+
+                <!-- <div class="social-buttons">
+                    <button id="google">log in with Google</button>
+                    <button id="facebook">log in with Facebook</button>
+                </div> -->
+
+            </form>
+
+            <button id="logout-btn" class="hidden">Log out</button>
+
+            </div>
+            </section>
+
+            <section id="bookmark-section" class="hidden">
+                <h3>My bookmarks</h3>
+
+                <form id="bookmark-form">
+                    <input type="text" id="bookmark-title" placeholder="Sidtitel" required>
+                    <input type="url" id="bookmark-url" placeholder="https://example.com" required>
+                    <button type="submit">Add bookmark</button>
+                </form>
+            
+                <ul id="bookmark-list"></ul>
+            </section>
+
+
         </main>
-        <footer>❝oh yes, there will be blood❞</footer>
+
+        <footer>『 oh yes, there will be blood 』</footer>
+
     </div>
 </body>
 </html>

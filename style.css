@@ -2,7 +2,10 @@ html {
     font-family: "Unica One", sans-serif;
     font-size: 14px;
 }
+
 body {
+    margin: 0;
+    padding: 0;
     background-image: url(./images/old-dark-scary-corridor-04-with-ghost-01.png);
     background-position: center;
     display: flex;
@@ -10,6 +13,7 @@ body {
     align-items: center;
     color: white;
 }
+
 .big-container {
     margin-top: 20px;
     max-width: fit-content;
@@ -17,84 +21,145 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 h1, h2 {
     text-align: center;
     font-weight: lighter;
 }
+
 h1 {
     font-family: "Special Elite", system-ui;
     font-size: 3rem;
     line-height: 56px;
 }
+
 h2 {
     margin-top: -20px;
     line-height: 34px;
     font-family: "Delius Unicase", cursive;
     font-size: 1.2rem;
 }
+
+.desktop-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .input {
     margin-top: 30px;
 }
+
 #username, #password {
+    padding-left: 10px;
     background-color: ghostwhite; opacity: 50%;
     display: flex;
     justify-self: center;
     margin-bottom: 10px;
-    width: 70vw;
+    width: 300px;
 }
+
 .remember-forgot {
+    height: 25px;
+    width: 315px;
     display: flex;
     justify-content: space-between;
-    font-size: 1.2rem;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
-#forgot {
-    margin: 0;
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
-#forgot:hover {
+
+#checkbox:hover {
+    cursor: pointer;
+}
+
+#forgot:hover, .remember:hover {
     cursor: pointer;
     text-decoration: underline;
 }
-.buttons {
-    margin-top: 20px;
+
+.buttons, .social-buttons {
     display: flex;
-    justify-content: space-between
+    flex-direction: row;
+    gap: 26px;
+    margin: 12px 0;
 }
+
 #log-in, #new-victim {
     background-color: #000;
     color: ghostwhite;
-    width: 28vw;
-    margin-bottom: 40px;
+    border: 1px solid ghostwhite;
+    width: 200px;
 }
+
 #log-in:hover, #new-victim:hover,
 #google:hover, #facebook:hover {
     cursor: pointer;
     opacity: 60%;
     box-shadow: 0 0 5px 5px lightskyblue;
 }
-.social-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 20px;
-}
+
 #google {
     background-color: #4B0101;
 }
+
 #facebook {
     background-color: #12124E;
 }
+
 #google, #facebook {
+    width: 200px;
+    border: none;
     color: ghostwhite;
 }
+
 #username, #password, #log-in,
 #new-victim, #google, #facebook {
-    border: none;
     font-family: "Unica One", sans-serif;
     font-size: 1.4rem;
     border-radius: 6px;
     height: 6vh;
 }
+
+.hidden {
+    display: none;
+}
+
 footer {
+    color: #BB0A1E;
+    margin-top: 30px;
     font-family: "New Tegomin", serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .mobile-layout, .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        align-items: center;
+    }
+
+    #username, #password, .remember-forgot {
+        width: 260px;
+    }
+
+    footer {
+        margin-top: -10px;
+    }
 }
